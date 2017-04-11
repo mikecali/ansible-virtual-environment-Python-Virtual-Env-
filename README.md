@@ -1,16 +1,16 @@
-#
+# Ansible and Python Virtual Environment 
 
-#Download the packages that are needed to install needed Python version and the virtualenv onto the home directory.:
+## Download the packages that are needed to install needed Python version and the virtualenv onto the home directory.:
  - Python-2.7.9.tgz
  - virtualenv-15.0.2.tar.gz
 
-#Create python 2.7.9 virtual environment
+## Create python 2.7.9 virtual environment
 cd $HOME/
 
-#Install dependencies
+## Install dependencies
 yum install -y zlib-dev openssl-devel sqlite-devel bzip2-devel zlib-devel
 
-#Extract python-2.7.9 installation package
+## Extract python-2.7.9 installation package
 tar -zxvf Python-2.7.9.tgz
 mkdir $HOME/paraenv
 cd $HOME/Python-2.7.9
@@ -18,7 +18,7 @@ cd $HOME/Python-2.7.9
 make
 make install
 
-#Extract virtualenv and setup the python2.7 to be used in the virtualenv
+## Extract virtualenv and setup the python2.7 to be used in the virtualenv
 cd $HOME/
 tar xvf virtualenv-15.0.2.tar.gz
 cd virtualenv-15.0.2
@@ -26,7 +26,7 @@ $HOME/paraenv/bin/python2.7 setup.py install
 cd $HOME/
 paraenv/bin/virtualenv ve -p paraenv/bin/python2.7
 
-#Activate the virtual environment
+## Activate the virtual environment
 source ve/bin/activate
 
 Check the Python version inside the virtual environment
@@ -34,10 +34,10 @@ Check the Python version inside the virtual environment
 (ve) [root@csuxprsgs107 sup-521200]# python -V
 Python 2.7.9 
 
-##Install the ansible package inside the python virtual environment
+## Install the ansible package inside the python virtual environment
 
 
-#Download ansible-2.2 and other dependencies packages and put it in a directory. for our test we we use the $HOME/ansible2.2 directory.
+## Download ansible-2.2 and other dependencies packages and put it in a directory. for our test we we use the $HOME/ansible2.2 directory.
 
 ansible-2.2.1.0.tar.gz
 Jinja-1.2.tar.gz
@@ -61,14 +61,14 @@ cffi-1.10.0-cp27-cp27m-manylinux1_x86_64.whl
 asn1crypto-0.22.0-py2.py3-none-any.whl
 appdirs-1.4.3-py2.py3-none-any.whl
 
-#Activate the virtual environment
+## Activate the virtual environment
 source ve/bin/activate
 
 cd $HOME/ansible2.2
 
 pip install --no-index --find-links=$HOME/ansible2.2/ ansible-2.2.1.0.tar.gz --verbose
 
-#Check the ansible version
+## Check the ansible version
 
 (ve) [root@csuxprsgs107 sup-521200]# ansible --version
 ansible 2.2.1.0
