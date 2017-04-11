@@ -50,7 +50,7 @@ Python 2.7.9
 
 ## Download ansible-2.2 and other dependencies packages and put it in a directory. for our test we we use the $HOME/ansible2.2 directory.
 
-``
+
 * ansible-2.2.1.0.tar.gz
 * Jinja-1.2.tar.gz
 * paramiko-2.1.2-py2.py3-none-any.whl
@@ -72,7 +72,7 @@ Python 2.7.9
 * cffi-1.10.0-cp27-cp27m-manylinux1_x86_64.whl
 * asn1crypto-0.22.0-py2.py3-none-any.whl
 * appdirs-1.4.3-py2.py3-none-any.whl
-``
+
 
 ## Activate the virtual environment
 source ve/bin/activate
@@ -83,9 +83,9 @@ pip install --no-index --find-links=$HOME/ansible2.2/ ansible-2.2.1.0.tar.gz --v
 
 ## Check the ansible version
 
-``
+
 *(ve) [root@csuxprsgs107 sup-521200]# ansible --version
 ansible 2.2.1.0
   config file = /etc/ansible/ansible.cfg
   configured module search path = Default w/o overrides
-``
+
